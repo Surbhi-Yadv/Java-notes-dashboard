@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java Notes Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+  <div class="bg-shape shape-3"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrapper">
+      <a href="#top" class="brand">☕ Java Notes</a>
+
+      <div class="header-actions">
+        <div class="search-box">
+          <span class="search-icon">⌕</span>
+          <input type="text" id="searchInput" placeholder="Search units or topics..." aria-label="Search notes" />
+        </div>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-icon">🌙</span>
+          <span class="theme-text">Theme</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-card glass reveal">
+        <p class="eyebrow">Premium Study Portal</p>
+        <h1>Java Notes Dashboard</h1>
+        <p class="hero-subtitle">Organized Study Material for All Units</p>
+
+        <div class="hero-stats">
+          <div class="stat-pill">5 Units</div>
+          <div class="stat-pill">Interactive Notes</div>
+          <div class="stat-pill">Responsive Design</div>
+        </div>
+
+        <div class="units-grid" id="unitCards">
+          <button class="unit-card active" data-target="unit1">
+            <span class="unit-icon">🚀</span>
+            <span class="unit-label">Unit 1</span>
+            <small>Introduction to Java</small>
+          </button>
+
+          <button class="unit-card" data-target="unit2">
+            <span class="unit-icon">🧠</span>
+            <span class="unit-label">Unit 2</span>
+            <small>Variables & Data Types</small>
+          </button>
+
+          <button class="unit-card" data-target="unit3">
+            <span class="unit-icon">⚙️</span>
+            <span class="unit-label">Unit 3</span>
+            <small>Operators</small>
+          </button>
+
+          <button class="unit-card" data-target="unit4">
+            <span class="unit-icon">🔁</span>
+            <span class="unit-label">Unit 4</span>
+            <small>Control Statements</small>
+          </button>
+
+          <button class="unit-card" data-target="unit5">
+            <span class="unit-icon">🏛️</span>
+            <span class="unit-label">Unit 5</span>
+            <small>OOP Concepts</small>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="notes-section container">
+      <article class="notes-card glass reveal unit-section" id="unit1" data-keywords="java introduction history features platform independent jvm bytecode object oriented">
+        <div class="notes-top">
+          <span class="notes-badge">Unit 1</span>
+          <button class="section-btn open-btn" data-unit="unit1">Start Learning</button>
+        </div>
+        <h2>Introduction to Java</h2>
+        <p>
+          Java is a powerful, object-oriented programming language designed to be secure,
+          portable, and easy to understand. It follows the principle of write once, run anywhere.
+        </p>
+        <ul>
+          <li>History and evolution of Java</li>
+          <li>Features of Java</li>
+          <li>JDK, JRE, and JVM</li>
+          <li>Bytecode and platform independence</li>
+          <li>Applications of Java</li>
+        </ul>
+      </article>
+
+      <article class="notes-card glass reveal unit-section" id="unit2" data-keywords="variables data types primitive non primitive declarations memory literals constants">
+        <div class="notes-top">
+          <span class="notes-badge">Unit 2</span>
+          <button class="section-btn open-btn" data-unit="unit2">Explore Types</button>
+        </div>
+        <h2>Variables and Data Types</h2>
+        <p>
+          Variables are used to store data in a program. Java provides different data types
+          to handle numbers, characters, true/false values, and more complex objects.
+        </p>
+        <ul>
+          <li>What is a variable?</li>
+          <li>Primitive data types in Java</li>
+          <li>Non-primitive data types</li>
+          <li>Rules for declaring variables</li>
+          <li>Type conversion and casting</li>
+        </ul>
+      </article>
+
+      <article class="notes-card glass reveal unit-section" id="unit3" data-keywords="operators arithmetic relational logical assignment bitwise unary ternary precedence">
+        <div class="notes-top">
+          <span class="notes-badge">Unit 3</span>
+          <button class="section-btn open-btn" data-unit="unit3">View Operators</button>
+        </div>
+        <h2>Operators</h2>
+        <p>
+          Operators are symbols that perform operations on values and variables. They are used
+          for calculations, comparisons, logical decisions, and assigning values.
+        </p>
+        <ul>
+          <li>Arithmetic operators</li>
+          <li>Relational operators</li>
+          <li>Logical operators</li>
+          <li>Assignment and unary operators</li>
+          <li>Ternary and bitwise operators</li>
+        </ul>
+      </article>
+
+      <article class="notes-card glass reveal unit-section" id="unit4" data-keywords="control statements if else switch loops for while do while break continue branching">
+        <div class="notes-top">
+          <span class="notes-badge">Unit 4</span>
+          <button class="section-btn open-btn" data-unit="unit4">Practice Flow</button>
+        </div>
+        <h2>Control Statements</h2>
+        <p>
+          Control statements manage the flow of execution in a Java program. They help make
+          decisions, repeat tasks, and transfer control based on conditions.
+        </p>
+        <ul>
+          <li>if, if-else, and nested if</li>
+          <li>switch statement</li>
+          <li>for, while, and do-while loops</li>
+          <li>break and continue</li>
+          <li>Decision-making examples</li>
+        </ul>
+      </article>
+
+      <article class="notes-card glass reveal unit-section" id="unit5" data-keywords="oop concepts class object inheritance polymorphism abstraction encapsulation constructor methods">
+        <div class="notes-top">
+          <span class="notes-badge">Unit 5</span>
+          <button class="section-btn open-btn" data-unit="unit5">Master OOP</button>
+        </div>
+        <h2>OOP Concepts</h2>
+        <p>
+          Object-Oriented Programming helps structure code into reusable components. Java strongly
+          supports OOP principles, making programs modular and easy to maintain.
+        </p>
+        <ul>
+          <li>Class and object</li>
+          <li>Constructor and methods</li>
+          <li>Inheritance</li>
+          <li>Polymorphism</li>
+          <li>Encapsulation and abstraction</li>
+        </ul>
+      </article>
+
+      <p class="empty-state hidden" id="emptyState">No matching unit found. Try another keyword.</p>
+    </section>
+  </main>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- Modal -->
+  <div class="modal" id="notesModal">
+    <div class="modal-box glass">
+      <button class="close-modal" id="closeModal">✖</button>
+      <h2 id="modalTitle">Unit Details</h2>
+      <p id="modalText"></p>
+      <ul id="modalList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
